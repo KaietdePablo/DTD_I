@@ -1,0 +1,49 @@
+<!-- 
+Nombre: Kaiet de Pablo
+Curso: ASIR
+Fecha: 03/04/2025
+Ejercicio: XML para representar libros de una biblioteca
+-->
+
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (titulo, editorial, autor, paginas)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT autor (nombre, apellidos)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT paginas (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro>
+        <titulo>Scarface</titulo>
+        <editorial>Universal</editorial>
+        <autor>
+            <nombre>Armitage</nombre>
+            <apellidos>Trail</apellidos>
+        </autor>
+        <paginas>250</paginas>
+    </libro>
+    
+    <libro>
+        <titulo>Don Quijote de la Mancha</titulo>
+        <editorial>Espasa</editorial>
+        <autor>
+            <nombre>Miguel</nombre>
+            <apellidos>de Cervantes</apellidos>
+        </autor>
+        <paginas>863</paginas>
+    </libro>
+    
+    <libro>
+        <titulo>Lupin</titulo>
+        <editorial>Phoebus</editorial>
+        <autor>
+            <nombre>Maurice</nombre>
+            <apellidos>Leblanc</apellidos>
+        </autor>
+        <paginas>320</paginas>
+    </libro>
+</biblioteca>
